@@ -43,6 +43,11 @@ public class Restaurant {
     public int calculateOrderPrice(OrderR orderR){
         int sum = 0;
         //todo implement
+
+        for (int i = 0; i < orderR.getMealList().size(); i++) {
+             sum+=orderR.getMealList().get(i).getPrice();
+                            }
+
         return sum;
     }
 
@@ -51,8 +56,14 @@ public class Restaurant {
      * @param mealName as string
      * @return meal as object
      */
-    public Meal getMeal(String mealName){
+    public Meal getMeal(String mealName) {
         //todo implement
+
+        for (int i = 0; i <= menu.size(); i++) {
+            if (menu.get(i).getName().equals(mealName)) {
+                return menu.get(i);
+            }
+        }
         return null;
     }
 

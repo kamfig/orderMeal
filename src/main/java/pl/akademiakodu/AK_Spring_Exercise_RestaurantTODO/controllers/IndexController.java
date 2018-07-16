@@ -17,7 +17,7 @@ public class IndexController {
      * @return index template
      */
     @GetMapping("/") public String indexGet(){
-        return "index";
+        return "redirect:/order";
     }
 
 }
